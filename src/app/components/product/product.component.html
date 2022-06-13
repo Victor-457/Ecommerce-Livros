@@ -1,0 +1,105 @@
+
+<div class="container marketing">
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <div class="card">
+        <div class="card-body">
+          <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-85 mx-lg-5"  src="./../../../assets/img/{{livro.picture}}" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-1 col-12"></div>
+    <div class="col-lg-5 col-12">
+      <div class="card">
+        <div class="card-header  px-3">
+          {{livro.titulo}}
+        </div>
+        <div class="card-body  px-3">
+          <br>
+          <h5 class="card-text">{{livro.autor}}</h5>
+          <br>
+          <p id="vendido-text">Vendido e entregue por MOON BOOKS.</p>
+          <p class="card-title">R{{livro.preco}}</p>
+          <br>
+          <a id="comprar" href="#" class="btn btn-primary w-100"><i class="bi bi-cart"></i> Comprar</a>
+          <br>
+          <br>
+          <hr>
+          <br>
+          <form class="row g-3">
+            <label for="calcularFrete">Consultar frete e prazo de entrega</label>
+            <div class="col-8">
+              <input type="text" class="form-control" id="inputConsultar" placeholder="Insira seu CEP"   [mask]='cepMask'>
+            </div>
+            <div class="col-4">
+              <button type="submit" class="btn btn-primary mb-3" id="consultarBtn"><i class="bi bi-search"></i> Consultar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-lg-1 col-12"></div>
+    <div class="col-lg-10 col-12">
+      <div class="card">
+        <div class="card-body">
+          <tabset type="pills">
+            <tab heading="Sinopse" id="Sinopse" class="mx-4 text-justify"><br>{{livro.descricao}}</tab>
+            <tab heading="Detalhes" class="mx-4">
+              <br>
+              <table class="table  table-striped-columns table-bordered">
+                <tbody>
+                  <tr>
+                    <th scope="row">Título:</th>
+                    <td>{{livro.titulo}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Autor:</th>
+                    <td>{{livro.autor}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Preço:</th>
+                    <td colspan="2">R{{livro.preco}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Disponível:</th>
+                    <td colspan="2">{{livro.emEstoque == true ? 'Sim' : 'Não'}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Editora:</th>
+                    <td colspan="2">{{livro.editora}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Idioma:</th>
+                    <td colspan="2">{{livro.idioma}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Encadernação:</th>
+                    <td colspan="2">{{livro.encadernacao}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Páginas:</th>
+                    <td colspan="2">{{livro.paginas}}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Categorias:</th>
+                    <td colspan="2"><span *ngFor="let item of livro.categoriasId let i = index">{{item.categorias}}<span *ngIf="i != livro.categoriasId.length-1">, </span> </span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Código:</th>
+                    <td colspan="2">{{livro.codigo}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </tab>
+          </tabset>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-1 col-12"></div>
+  </div>
+</div>

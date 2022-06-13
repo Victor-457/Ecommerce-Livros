@@ -1,0 +1,17 @@
+.pd-05{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.columns {
+  height: auto;
+  overflow-y: scroll;
+  column-count: 2;
+}
+.text{
+  font-size: 1.2rem;
+}
+
+i{
+  font-size: 1.3rem;
+}
+

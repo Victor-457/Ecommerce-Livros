@@ -1,0 +1,50 @@
+<div class="container marketing">
+  <!-- Three columns of text below the carousel -->
+  <ul>
+    <li *ngFor="let number of [0,1,2]; let i = index">
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col-lg-12 col-12">
+              <a  [routerLink]='"product/"+gridLivros[i].id'><img class="bd-placeholder-img bd-placeholder-img-lg d-block w-75" src="./../../../assets/img/{{gridLivros[i].picture}}" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"></a>
+            </div>
+          </div>
+          <br>
+          <a  [routerLink]='"product/"+gridLivros[i].id'><h3 class="fw-normal">{{gridLivros[i].titulo}}</h3></a>
+          <br>
+          <h5 class="mb-4">R{{gridLivros[i].preco}}</h5>
+          <p><a  id="comprar" class="btn btn-lg btn-outline-primary" href="#"><i class="bi bi-cart"></i> Comprar</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col-lg-12 col-12">
+              <a  [routerLink]='"product/"+gridLivros[i+3].id'><img class="bd-placeholder-img bd-placeholder-img-lg d-block w-75"  src="./../../../assets/img/{{gridLivros[i+3].picture}}" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"></a>
+            </div>
+          </div>
+          <br>
+          <a [routerLink]='"product/"+gridLivros[i+3].id'><h3 class="fw-normal">{{gridLivros[i+3].titulo}}</h3></a>
+          <br>
+          <h5 class="mb-4">R{{gridLivros[i+3].preco}}</h5>
+          <p><a  id="comprar" class="btn btn-lg btn-outline-primary" href="#"><i class="bi bi-cart"></i> Comprar</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col-lg-12 col-12">
+              <a [routerLink]='"product/"+gridLivros[i+6].id'><img class="bd-placeholder-img bd-placeholder-img-lg d-block w-75"  src="./../../../assets/img/{{gridLivros[i+6].picture}}" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"></a>
+            </div>
+          </div>
+          <br>
+          <a  [routerLink]='"product/"+gridLivros[i+6].id'><h3 class="fw-normal">{{gridLivros[i+6].titulo}}</h3></a>
+          <br>
+          <h5 class="mb-4">R{{gridLivros[i+6].preco}}</h5>
+          <p><a id="comprar" class="btn btn-lg btn-outline-primary" href="#"><i class="bi bi-cart"></i> Comprar</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      <br>
+    </li>
+
+  </ul>
+</div>
+

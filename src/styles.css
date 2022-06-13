@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  font-family: 'Mulish', sans-serif;
+  font-size: 14px;
+}
+
+h1{
+  font-family: 'Forum', cursive;
+}
+
+h3,
+h5{
+  color: #272727;
+}
+
+body
+{
+  background-image: url("src/assets/img/bg.png");
+}
+
+button,
+#comprar,
+.card,
+input{
+  border-radius: 20px !important;
+}
+
+#brand{
+  font-family: 'Forum', cursive;
+  font-size: 3rem;
+  color: #272727;
+}
+.menu
+{
+  text-decoration: none;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+
+.text-justify{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+

@@ -1,0 +1,42 @@
+.card-header
+{
+  font-size: 3rem;
+}
+
+.card-title
+{
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+#vendido-text{
+  font-size: 1rem;
+}
+
+.card-text{
+  font-size: 2rem;
+}
+
+i,
+#comprar,
+label,
+heading{
+  font-size: 1.5rem;
+}
+
+#inputConsultar,
+#consultarBtn{
+  font-size: 1.5rem;
+}
+
+
+.w-85{
+  width: 85% !important;
+}
+
+#Sinopse,
+td,
+th,
+span{
+  font-size: 1.3rem !important;
+}
