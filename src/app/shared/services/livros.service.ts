@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 import { lastValueFrom } from 'rxjs';
-import { Livro } from '../models/livro';
 
 @Injectable({
   providedIn: 'root'
