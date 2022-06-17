@@ -9,6 +9,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse'
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxMaskModule } from 'ngx-mask';
 
+
 import { BestSellerComponent } from './components/bestSeller/bestSeller.component';
 import { HomePageModule } from './components/homePage/home-page/home-page.module';
 import { ProductComponent } from './components/product/product.component';
@@ -35,7 +36,8 @@ import { AppComponent } from './app.component';
     RouterModule,
     AppRoutingModule,
     TabsModule.forRoot(),
-    NgxMaskModule.forRoot(),
+    NgxMaskModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]

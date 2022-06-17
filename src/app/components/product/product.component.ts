@@ -25,7 +25,7 @@ export class ProductComponent implements OnInit {
   }
 
   private async exibirLivro(){
-    debugger
+
     await this.getLivroId()
 
     this.livro.categoriasId  = await this.montarCategorias()
@@ -33,7 +33,7 @@ export class ProductComponent implements OnInit {
   }
 
   private async montarCategorias(){
-    debugger
+
     let categorias: any = []
     this.livro.categoriasId.forEach( async (categoria: any) =>
     {
@@ -50,7 +50,7 @@ export class ProductComponent implements OnInit {
 
   private async getLivro(id: number){
 
-debugger
+
     this.livro = await this._livrosServices.getLivro(id)
   }
 }
