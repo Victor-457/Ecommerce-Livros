@@ -13,26 +13,16 @@ export class CalcularFreteCorreiosService {
 
   public async calcularFrete(){
 
-    let args = {
-      // Não se preocupe com a formatação dos valores de entrada do cep, qualquer uma será válida (ex: 21770-200, 21770 200, 21asa!770@###200 e etc),
-      sCepOrigem: '81200100',
-      sCepDestino: '21770200',
-      nVlPeso: '1',
-      nCdFormato: '1',
-      nVlComprimento: '20',
-      nVlAltura: '20',
-      nVlLargura: '20',
-      nCdServico: ['04014', '04510'], //Array com os códigos de serviço
-      nVlDiametro: '0',
-    };
     let httpParams = this.montarParametrosCorreiosRequest()
 
-    let frete =  await lastValueFrom(this._http.get('http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx', {responseType: 'text', params: httpParams}))
+    let frete =  await lastValueFrom(this._http.get(
+                    'http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx',
+                    { responseType: 'text', params: httpParams})
+                  )
 
-    let test = converter.xml2json(frete)
-    let test3 = converter.xml2js(frete)
-
-    console.log(test3.elements[0].elements[0])
+    return this.formatJsonXmlConversion(
+              converter.xml2js(frete)
+            );
   }
 
   private montarParametrosCorreiosRequest(){//nCdEmpresa:string, sDsSenha:string, sCepOrigem:string, sCepDestino:string,
@@ -66,13 +56,17 @@ export class CalcularFreteCorreiosService {
   }
 
   formatJsonXmlConversion(json: any){
-    let obj
-    let jsonArray = []
+    let obj:any
+
     json.elements[0].elements[0].elements.forEach((element: any) => {
+      if(element.elements)
       obj = {
-        
+        ...obj,
+        [element?.name]: element?.elements[0]?.text
       }
     });
+
+    return obj;
   }
  }
 
