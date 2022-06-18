@@ -25,7 +25,8 @@ heading{
 }
 
 #inputConsultar,
-#consultarBtn{
+#consultarBtn,
+#cep{
   font-size: 1.5rem;
 }
 

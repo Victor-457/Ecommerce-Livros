@@ -14,7 +14,7 @@ import { ProductComponent } from './../product.component';
         path: '',
         component: ProductComponent
       }
-    ])
+    ]),
   ]
 })
 export class ProductModule { }

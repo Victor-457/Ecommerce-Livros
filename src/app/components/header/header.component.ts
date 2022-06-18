@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit {
     private test: CalcularFreteCorreiosService) { }
 
   ngOnInit() {
-    this.test.calcularFrete()
     this.categoriasService.getCategorias().subscribe(
       (_obj)=>{
         this.categorias =_obj

@@ -26,13 +26,15 @@
           <br>
           <hr>
           <br>
-          <form class="row g-3">
-            <label for="calcularFrete">Consultar frete e prazo de entrega</label>
-            <div class="col-8">
-              <input type="text" class="form-control" id="inputConsultar" placeholder="Insira seu CEP"   [mask]='cepMask'>
-            </div>
-            <div class="col-4">
-              <button type="submit" class="btn btn-primary mb-3" id="consultarBtn"><i class="bi bi-search"></i> Consultar</button>
+          <form [formGroup]="consultarFreteForm" (ngSubmit)="calcularfrete()">
+            <div class="row g-3">
+              <label for="calcularFrete">Consultar frete e prazo de entrega: </label>
+              <div class="col-8">
+                <input  formControlName="cep" type="text" class="form-control" id="cep" placeholder="Insira seu CEP"   [mask]='cepMask'>
+              </div>
+              <div class="col-4">
+                <button type="submit" class="btn btn-primary mb-3" id="consultarBtn"><i class="bi bi-search"></i> Consultar</button>
+              </div>
             </div>
           </form>
         </div>

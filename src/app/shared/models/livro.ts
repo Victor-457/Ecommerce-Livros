@@ -14,6 +14,11 @@ export class Livro {
     public encadernacao: string = "",
     public paginas: number = -1,
     public categoriasId: any[] = [],
-    public codigo: string = ""
+    public codigo: string = "",
+    public nVlPeso: string = "",
+    public nVlComprimento: string = "",
+    public nVlAltura: string = "",
+    public nVlLargura: string = "",
+    public nVlDiametro: string = "",
   ){}
 }

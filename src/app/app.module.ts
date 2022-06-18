@@ -1,3 +1,4 @@
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -36,7 +37,9 @@ import { AppComponent } from './app.component';
     RouterModule,
     AppRoutingModule,
     TabsModule.forRoot(),
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
