@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { CollapseModule } from 'ngx-bootstrap/collapse'
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxMaskModule } from 'ngx-mask';
@@ -17,6 +18,7 @@ import { ProductComponent } from './components/product/product.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AppComponent } from './app.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
@@ -39,8 +41,9 @@ import { AppComponent } from './app.component';
     TabsModule.forRoot(),
     NgxMaskModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    ModalModule.forRoot(),
+    SweetAlert2Module
   ],
   providers: [],
   bootstrap: [AppComponent]

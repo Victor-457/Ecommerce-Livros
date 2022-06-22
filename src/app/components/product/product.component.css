@@ -41,3 +41,20 @@ th,
 span{
   font-size: 1.3rem !important;
 }
+
+hr{
+  margin-top: 1rem;
+  border: 1px solid #0d6efd;
+}
+#template
+{
+  width: 40vw;
+}
+
+.card,
+.card-header,
+.modal-header,
+.modal-body{
+  background: #EFEEEA !important;
+}
+
